@@ -15,9 +15,6 @@
 
 ## デモ
 
-### ビデオ
-
-https://github.com/user-attachments/assets/f3786598-1f2a-4d07-919e-8b99dfa1de3e
 
 このデモでは、BoteWrite の使用方法を紹介しています：
 

@@ -17,9 +17,6 @@ Besuchen Sie [unsere offizielle Website](https://deerflow.tech/) für weitere De
 
 ## Demo
 
-### Video
-
-https://github.com/user-attachments/assets/f3786598-1f2a-4d07-919e-8b99dfa1de3e
 
 In dieser Demo zeigen wir, wie man BoteWrite nutzt, um:
 - Nahtlos mit MCP-Diensten zu integrieren
