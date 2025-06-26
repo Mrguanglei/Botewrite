@@ -14,15 +14,11 @@ export function JoinCommunitySection() {
     <section className="flex w-full flex-col items-center justify-center pb-12">
       <SectionHeader
         anchor="join-community"
-        title={
-          <AuroraText colors={["#60A5FA", "#A5FA60", "#A560FA"]}>
-            Join the DeerFlow Community
-          </AuroraText>
-        }
-        description="Contribute brilliant ideas to shape the future of DeerFlow. Collaborate, innovate, and make impacts."
+        title="Join the BoteWrite Community"
+        description="Contribute brilliant ideas to shape the future of BoteWrite. Collaborate, innovate, and make impacts."
       />
       <Button className="text-xl" size="lg" asChild>
-        <Link href="https://github.com/bytedance/deer-flow" target="_blank">
+        <Link href="https://github.com/Mrguanglei/Botewrite" target="_blank">
           <GithubFilled />
           Contribute Now
         </Link>

@@ -13,25 +13,25 @@ class StepType(str, Enum):
 
 
 class Step(BaseModel):
-    need_search: bool = Field(..., description="Must be explicitly set for each step")
+    need_search: bool = Field(..., description="必须为每个步骤明确设置")
     title: str
-    description: str = Field(..., description="Specify exactly what data to collect")
-    step_type: StepType = Field(..., description="Indicates the nature of the step")
+    description: str = Field(..., description="明确指定要收集什么数据")
+    step_type: StepType = Field(..., description="表示步骤的性质")
     execution_res: Optional[str] = Field(
-        default=None, description="The Step execution result"
+        default=None, description="步骤执行结果"
     )
 
 
 class Plan(BaseModel):
     locale: str = Field(
-        ..., description="e.g. 'en-US' or 'zh-CN', based on the user's language"
+        ..., description="例如'en-US'或'zh-CN'，基于用户的语言"
     )
     has_enough_context: bool
     thought: str
     title: str
     steps: List[Step] = Field(
         default_factory=list,
-        description="Research & Processing steps to get more context",
+        description="研究和处理步骤以获得更多上下文",
     )
 
     class Config:
@@ -40,15 +40,15 @@ class Plan(BaseModel):
                 {
                     "has_enough_context": False,
                     "thought": (
-                        "To understand the current market trends in AI, we need to gather comprehensive information."
+                        "为了了解AI的当前市场趋势，我们需要收集全面的信息。"
                     ),
-                    "title": "AI Market Research Plan",
+                    "title": "AI市场研究计划",
                     "steps": [
                         {
                             "need_search": True,
-                            "title": "Current AI Market Analysis",
+                            "title": "当前AI市场分析",
                             "description": (
-                                "Collect data on market size, growth rates, major players, and investment trends in AI sector."
+                                "收集AI行业市场规模、增长率、主要参与者和投资趋势的数据。"
                             ),
                             "step_type": "research",
                         }

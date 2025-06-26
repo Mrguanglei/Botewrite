@@ -9,18 +9,16 @@ IF "%MODE%"=="dev" GOTO DEV
 IF "%MODE%"=="development" GOTO DEV
 
 :PROD
-echo Starting DeerFlow in [PRODUCTION] mode...
-start uv run server.py
-cd web
-start pnpm start
+echo Starting BoteWrite in [PRODUCTION] mode...
+start "BoteWrite Backend" cmd /c "uv run server.py"
+start "BoteWrite Web UI" cmd /c "cd web && pnpm start"
 REM Wait for user to close
 GOTO END
 
 :DEV
-echo Starting DeerFlow in [DEVELOPMENT] mode...
-start uv run server.py --reload
-cd web
-start pnpm dev
+echo Starting BoteWrite in [DEVELOPMENT] mode...
+start "BoteWrite Backend" cmd /c "uv run server.py --reload"
+start "BoteWrite Web UI" cmd /c "cd web && pnpm dev"
 REM Wait for user to close
 pause
 

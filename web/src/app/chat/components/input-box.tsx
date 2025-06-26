@@ -218,7 +218,7 @@ export function InputBox({
                     Deep Thinking Mode: {enableDeepThinking ? "On" : "Off"}
                   </h3>
                   <p>
-                    When enabled, DeerFlow will use reasoning model (
+                    When enabled, BoteWrite will use reasoning model (
                     {reasoningModel}) to generate more thoughtful plans.
                   </p>
                 </div>
@@ -247,7 +247,7 @@ export function InputBox({
                   Investigation Mode: {backgroundInvestigation ? "On" : "Off"}
                 </h3>
                 <p>
-                  When enabled, DeerFlow will perform a quick search before
+                  When enabled, BoteWrite will perform a quick search before
                   planning. This is useful for researches related to ongoing
                   events and news.
                 </p>

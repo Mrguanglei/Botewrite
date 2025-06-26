@@ -12,58 +12,58 @@ const caseStudies = [
   {
     id: "eiffel-tower-vs-tallest-building",
     icon: Building,
-    title: "How tall is Eiffel Tower compared to tallest building?",
+    title: "埃菲尔铁塔与最高建筑相比有多高？",
     description:
-      "The research compares the heights and global significance of the Eiffel Tower and Burj Khalifa, and uses Python code to calculate the multiples.",
+      "该研究比较了埃菲尔铁塔和哈利法塔的高度和全球意义，并使用Python代码计算倍数。",
   },
   {
     id: "github-top-trending-repo",
     icon: Github,
-    title: "What are the top trending repositories on GitHub?",
+    title: "GitHub上最热门的仓库有哪些？",
     description:
-      "The research utilized MCP services to identify the most popular GitHub repositories and documented them in detail using search engines.",
+      "该研究利用MCP服务识别最受欢迎的GitHub仓库，并使用搜索引擎详细记录。",
   },
   {
     id: "nanjing-traditional-dishes",
     icon: Ham,
-    title: "Write an article about Nanjing's traditional dishes",
+    title: "写一篇关于南京传统菜品的文章",
     description:
-      "The study vividly showcases Nanjing's famous dishes through rich content and imagery, uncovering their hidden histories and cultural significance.",
+      "该研究通过丰富的内容和图像生动展示了南京的著名菜品，揭示了它们隐藏的历史和文化意义。",
   },
   {
     id: "rental-apartment-decoration",
     icon: Home,
-    title: "How to decorate a small rental apartment?",
+    title: "如何装饰小型出租公寓？",
     description:
-      "The study provides readers with practical and straightforward methods for decorating apartments, accompanied by inspiring images.",
+      "该研究为读者提供了装饰公寓的实用和直接方法，并配有鼓舞人心的图像。",
   },
   {
     id: "review-of-the-professional",
     icon: Film,
-    title: "Introduce the movie 'Léon: The Professional'",
+    title: "介绍电影《这个杀手不太冷》",
     description:
-      "The research provides a comprehensive introduction to the movie 'Léon: The Professional', including its plot, characters, and themes.",
+      "该研究全面介绍了电影《这个杀手不太冷》，包括其情节、角色和主题。",
   },
   {
     id: "china-food-delivery",
     icon: Bike,
-    title: "How do you view the takeaway war in China? (in Chinese)",
+    title: "如何看待中国的外卖战争？（中文）",
     description:
-      "The research analyzes the intensifying competition between JD and Meituan, highlighting their strategies, technological innovations, and challenges.",
+      "该研究分析了京东和美团之间日益激烈的竞争，突出了它们的策略、技术创新和挑战。",
   },
   {
     id: "ultra-processed-foods",
     icon: Pizza,
-    title: "Are ultra-processed foods linked to health?",
+    title: "超加工食品与健康有关联吗？",
     description:
-      "The research examines the health risks of rising ultra-processed food consumption, urging more research on long-term effects and individual differences.",
+      "该研究考察了超加工食品消费增加的健康风险，敦促对长期影响和个体差异进行更多研究。",
   },
   {
     id: "ai-twin-insurance",
     icon: Bot,
-    title: 'Write an article on "Would you insure your AI twin?"',
+    title: '写一篇关于"你会为你的AI双胞胎投保吗？"的文章',
     description:
-      "The research explores the concept of insuring AI twins, highlighting their benefits, risks, ethical considerations, and the evolving regulatory.",
+      "该研究探讨了为AI双胞胎投保的概念，突出了它们的益处、风险、伦理考虑和不断发展的监管。",
   },
 ];
 
@@ -72,8 +72,8 @@ export function CaseStudySection() {
     <section className="relative container hidden flex-col items-center justify-center md:flex">
       <SectionHeader
         anchor="case-studies"
-        title="Case Studies"
-        description="See DeerFlow in action through replays."
+        title="案例研究"
+        description="通过回放查看Botewrite的实际应用。"
       />
       <div className="grid w-3/4 grid-cols-1 gap-2 sm:w-full sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {caseStudies.map((caseStudy) => (
@@ -84,7 +84,7 @@ export function CaseStudySection() {
                 name: caseStudy.title,
                 description: caseStudy.description,
                 href: `/chat?replay=${caseStudy.id}`,
-                cta: "Click to watch replay",
+                cta: "点击观看回放",
                 className: "w-full h-full",
               }}
             />

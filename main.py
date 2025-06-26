@@ -1,8 +1,9 @@
+#!/usr/bin/env python3
 # Copyright (c) 2025 Bytedance Ltd. and/or its affiliates
 # SPDX-License-Identifier: MIT
 
 """
-Entry point script for the DeerFlow project.
+Entry point script for the BoteWrite project.
 """
 
 import argparse

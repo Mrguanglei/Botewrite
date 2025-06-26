@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import { cn } from "~/lib/utils";
 
@@ -14,20 +15,18 @@ export function Welcome({ className }: { className?: string }) {
       animate={{ opacity: 1, scale: 1 }}
     >
       <h3 className="mb-2 text-center text-3xl font-medium">
-        👋 Hello, there!
+        👋 Hello, 好久不见!
       </h3>
       <div className="text-muted-foreground px-4 text-center text-lg">
         Welcome to{" "}
-        <a
-          href="https://github.com/bytedance/deer-flow"
+        <Link
+          href="https://github.com/Mrguanglei/Botewrite"
           target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
+          className="text-muted-foreground hover:text-foreground"
         >
-          🦌 DeerFlow
-        </a>
-        , a deep research assistant built on cutting-edge language models, helps
-        you search on web, browse information, and handle complex tasks.
+          Botewrite
+        </Link>
+        , 一个基于前沿语言模型打造的深度研究助手，能够帮助您进行网络搜索、浏览信息以及处理复杂任务。
       </div>
     </motion.div>
   );

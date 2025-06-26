@@ -47,7 +47,7 @@ logger = logging.getLogger(__name__)
 INTERNAL_SERVER_ERROR_DETAIL = "Internal Server Error"
 
 app = FastAPI(
-    title="DeerFlow API",
+    title="BoteWrite API",
     description="API for Deer",
     version="0.1.0",
 )
@@ -144,8 +144,8 @@ async def _astream_workflow_generator(
                         "content": event_data["__interrupt__"][0].value,
                         "finish_reason": "interrupt",
                         "options": [
-                            {"text": "Edit plan", "value": "edit_plan"},
-                            {"text": "Start research", "value": "accepted"},
+                            {"text": "编辑计划", "value": "edit_plan"},
+                            {"text": "开始研究", "value": "accepted"},
                         ],
                     },
                 )

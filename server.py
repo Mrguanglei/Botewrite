@@ -1,8 +1,9 @@
+#!/usr/bin/env python3
 # Copyright (c) 2025 Bytedance Ltd. and/or its affiliates
 # SPDX-License-Identifier: MIT
 
 """
-Server script for running the DeerFlow API.
+Server script for running the BoteWrite API.
 """
 
 import argparse
@@ -32,7 +33,7 @@ signal.signal(signal.SIGINT, handle_shutdown)
 
 if __name__ == "__main__":
     # Parse command line arguments
-    parser = argparse.ArgumentParser(description="Run the DeerFlow API server")
+    parser = argparse.ArgumentParser(description="Run the BoteWrite API server")
     parser.add_argument(
         "--reload",
         action="store_true",
@@ -41,7 +42,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--host",
         type=str,
-        default="localhost",
+        default="0.0.0.0",
         help="Host to bind the server to (default: localhost)",
     )
     parser.add_argument(
@@ -66,7 +67,7 @@ if __name__ == "__main__":
         reload = True
 
     try:
-        logger.info(f"Starting DeerFlow API server on {args.host}:{args.port}")
+        logger.info(f"Starting BoteWrite API server on {args.host}:{args.port}")
         uvicorn.run(
             "src.server:app",
             host=args.host,

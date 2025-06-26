@@ -20,6 +20,7 @@ import { useReplay } from "~/core/replay";
 import { sendMessage, useMessageIds, useStore } from "~/core/store";
 import { env } from "~/env";
 import { cn } from "~/lib/utils";
+import Link from "next/link";
 
 import { ConversationStarter } from "./conversation-starter";
 import { InputBox } from "./input-box";
@@ -158,10 +159,10 @@ export function MessagesBlock({ className }: { className?: string }) {
                     <CardDescription>
                       <RainbowText animated={responding}>
                         {responding
-                          ? "DeerFlow is now replaying the conversation..."
+                          ? "BoteWrite is now replaying the conversation..."
                           : replayStarted
                             ? "The replay has been stopped."
-                            : `You're now in DeerFlow's replay mode. Click the "Play" button on the right to start.`}
+                            : `You're now in BoteWrite's replay mode. Click the "Play" button on the right to start.`}
                       </RainbowText>
                     </CardDescription>
                   </CardHeader>
@@ -192,14 +193,13 @@ export function MessagesBlock({ className }: { className?: string }) {
               <div className="text-muted-foreground w-full text-center text-xs">
                 * This site is for demo purposes only. If you want to try your
                 own question, please{" "}
-                <a
-                  className="underline"
-                  href="https://github.com/bytedance/deer-flow"
+                <Link
+                  href="https://github.com/Mrguanglei/Botewrite"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground"
                 >
                   click here
-                </a>{" "}
+                </Link>{" "}
                 to clone it locally and run it.
               </div>
             )}

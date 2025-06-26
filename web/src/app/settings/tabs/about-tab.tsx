@@ -12,4 +12,4 @@ export const AboutTab: Tab = () => {
   return <Markdown>{about}</Markdown>;
 };
 AboutTab.icon = BadgeInfo;
-AboutTab.displayName = "About";
+AboutTab.displayName = "关于";

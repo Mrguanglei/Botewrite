@@ -1,4 +1,4 @@
-# 🦌 DeerFlow
+# BoteWrite
 
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -7,11 +7,11 @@
 
 > 源于开源，回馈开源。
 
-**DeerFlow**（**D**eep **E**xploration and **E**fficient **R**esearch **Flow**）是一个社区驱动的深度研究框架，它建立在开源社区的杰出工作基础之上。我们的目标是将语言模型与专业工具（如网络搜索、爬虫和 Python 代码执行）相结合，同时回馈使这一切成为可能的社区。
+**BoteWrite**（**D**eep **E**xploration and **E**fficient **R**esearch **Flow**）是一个社区驱动的深度研究框架，它建立在开源社区的杰出工作基础之上。我们的目标是将语言模型与专业工具（如网络搜索、爬虫和 Python 代码执行）相结合，同时回馈使这一切成为可能的社区。
 
-目前，DeerFlow 已正式入驻[火山引擎的 FaaS 应用中心](https://console.volcengine.com/vefaas/region:vefaas+cn-beijing/market)，用户可通过[体验链接](https://console.volcengine.com/vefaas/region:vefaas+cn-beijing/market/deerflow/?channel=github&source=deerflow)进行在线体验，直观感受其强大功能与便捷操作；同时，为满足不同用户的部署需求，DeerFlow 支持基于火山引擎一键部署，点击[部署链接](https://console.volcengine.com/vefaas/region:vefaas+cn-beijing/application/create?templateId=683adf9e372daa0008aaed5c&channel=github&source=deerflow)即可快速完成部署流程，开启高效研究之旅。
+目前，BoteWrite 已正式入驻[火山引擎的 FaaS 应用中心](https://console.volcengine.com/vefaas/region:vefaas+cn-beijing/market)，用户可通过[体验链接](https://console.volcengine.com/vefaas/region:vefaas+cn-beijing/market/deerflow/?channel=github&source=deerflow)进行在线体验，直观感受其强大功能与便捷操作；同时，为满足不同用户的部署需求，BoteWrite 支持基于火山引擎一键部署，点击[部署链接](https://console.volcengine.com/vefaas/region:vefaas+cn-beijing/application/create?templateId=683adf9e372daa0008aaed5c&channel=github&source=deerflow)即可快速完成部署流程，开启高效研究之旅。
 
-请访问[DeerFlow 的官方网站](https://deerflow.tech/)了解更多详情。
+请访问[BoteWrite 的官方网站](https://deerflow.tech/)了解更多详情。
 
 ## 演示
 
@@ -19,7 +19,7 @@
 
 https://github.com/user-attachments/assets/f3786598-1f2a-4d07-919e-8b99dfa1de3e
 
-在此演示中，我们展示了如何使用 DeerFlow：
+在此演示中，我们展示了如何使用 BoteWrite：
 
 - 无缝集成 MCP 服务
 - 进行深度研究过程并生成包含图像的综合报告
@@ -50,7 +50,7 @@ https://github.com/user-attachments/assets/f3786598-1f2a-4d07-919e-8b99dfa1de3e
 
 ## 快速开始
 
-DeerFlow 使用 Python 开发，并配有用 Node.js 编写的 Web UI。为确保顺利的设置过程，我们推荐使用以下工具：
+BoteWrite 使用 Python 开发，并配有用 Node.js 编写的 Web UI。为确保顺利的设置过程，我们推荐使用以下工具：
 
 ### 推荐工具
 
@@ -74,7 +74,7 @@ DeerFlow 使用 Python 开发，并配有用 Node.js 编写的 Web UI。为确�
 
 ```bash
 # 克隆仓库
-git clone https://github.com/bytedance/deer-flow.git
+git clone https://github.com/Mrguanglei/Botewrite.git
 cd deer-flow
 
 # 安装依赖，uv将负责Python解释器和虚拟环境的创建，并安装所需的包
@@ -142,7 +142,7 @@ bootstrap.bat -d
 
 ## 支持的搜索引擎
 
-DeerFlow 支持多种搜索引擎，可以在`.env`文件中通过`SEARCH_API`变量进行配置：
+BoteWrite 支持多种搜索引擎，可以在`.env`文件中通过`SEARCH_API`变量进行配置：
 
 - **Tavily**（默认）：专为 AI 应用设计的专业搜索 API
 
@@ -212,7 +212,7 @@ SEARCH_API=tavily
 
 ## 架构
 
-DeerFlow 实现了一个模块化的多智能体系统架构，专为自动化研究和代码分析而设计。该系统基于 LangGraph 构建，实现了灵活的基于状态的工作流，其中组件通过定义良好的消息传递系统进行通信。
+BoteWrite 实现了一个模块化的多智能体系统架构，专为自动化研究和代码分析而设计。该系统基于 LangGraph 构建，实现了灵活的基于状态的工作流，其中组件通过定义良好的消息传递系统进行通信。
 
 ![架构图](./assets/architecture.png)
 
@@ -272,11 +272,11 @@ make format
 
 ### 使用 LangGraph Studio 进行调试
 
-DeerFlow 使用 LangGraph 作为其工作流架构。您可以使用 LangGraph Studio 实时调试和可视化工作流。
+BoteWrite 使用 LangGraph 作为其工作流架构。您可以使用 LangGraph Studio 实时调试和可视化工作流。
 
 #### 本地运行 LangGraph Studio
 
-DeerFlow 包含一个`langgraph.json`配置文件，该文件定义了 LangGraph Studio 的图结构和依赖关系。该文件指向项目中定义的工作流图，并自动从`.env`文件加载环境变量。
+BoteWrite 包含一个`langgraph.json`配置文件，该文件定义了 LangGraph Studio 的图结构和依赖关系。该文件指向项目中定义的工作流图，并自动从`.env`文件加载环境变量。
 
 ##### Mac
 
@@ -326,7 +326,7 @@ langgraph dev
 
 ### 启用 LangSmith 追踪
 
-DeerFlow 支持 LangSmith 追踪功能，帮助您调试和监控工作流。要启用 LangSmith 追踪：
+BoteWrite 支持 LangSmith 追踪功能，帮助您调试和监控工作流。要启用 LangSmith 追踪：
 
 1. 确保您的 `.env` 文件中有以下配置（参见 `.env.example`）：
    ```bash
@@ -379,7 +379,7 @@ docker compose up
 
 ## 文本转语音集成
 
-DeerFlow 现在包含一个文本转语音(TTS)功能，允许您将研究报告转换为语音。此功能使用火山引擎 TTS API 生成高质量的文本音频。速度、音量和音调等特性也可以自定义。
+BoteWrite 现在包含一个文本转语音(TTS)功能，允许您将研究报告转换为语音。此功能使用火山引擎 TTS API 生成高质量的文本音频。速度、音量和音调等特性也可以自定义。
 
 ### 使用 TTS API
 
@@ -400,7 +400,7 @@ curl --location 'http://localhost:8000/api/tts' \
 
 ## 示例
 
-以下示例展示了 DeerFlow 的功能：
+以下示例展示了 BoteWrite 的功能：
 
 ### 研究报告
 
@@ -486,7 +486,7 @@ uv run main.py --help
 
 ### 人在环中
 
-DeerFlow 包含一个人在环中机制，允许您在执行研究计划前审查、编辑和批准：
+BoteWrite 包含一个人在环中机制，允许您在执行研究计划前审查、编辑和批准：
 
 1. **计划审查**：启用人在环中时，系统将在执行前向您展示生成的研究计划
 
@@ -530,24 +530,24 @@ DeerFlow 包含一个人在环中机制，允许您在执行研究计划前审�
 
 ## 致谢
 
-DeerFlow 建立在开源社区的杰出工作基础之上。我们深深感谢所有使 DeerFlow 成为可能的项目和贡献者。诚然，我们站在巨人的肩膀上。
+BoteWrite 建立在开源社区的杰出工作基础之上。我们深深感谢所有使 BoteWrite 成为可能的项目和贡献者。诚然，我们站在巨人的肩膀上。
 
 我们要向以下项目表达诚挚的感谢，感谢他们的宝贵贡献：
 
 - **[LangChain](https://github.com/langchain-ai/langchain)**：他们卓越的框架为我们的 LLM 交互和链提供动力，实现了无缝集成和功能。
-- **[LangGraph](https://github.com/langchain-ai/langgraph)**：他们在多智能体编排方面的创新方法对于实现 DeerFlow 复杂工作流至关重要。
+- **[LangGraph](https://github.com/langchain-ai/langgraph)**：他们在多智能体编排方面的创新方法对于实现 BoteWrite 复杂工作流至关重要。
 
 这些项目展示了开源协作的变革力量，我们很自豪能够在他们的基础上构建。
 
 ### 核心贡献者
 
-衷心感谢`DeerFlow`的核心作者，他们的愿景、热情和奉献使这个项目得以实现：
+衷心感谢`BoteWrite`的核心作者，他们的愿景、热情和奉献使这个项目得以实现：
 
 - **[Daniel Walnut](https://github.com/hetaoBackend/)**
 - **[Henry Li](https://github.com/magiccube/)**
 
-您坚定不移的承诺和专业知识是 DeerFlow 成功的驱动力。我们很荣幸有您引领这一旅程。
+您坚定不移的承诺和专业知识是 BoteWrite 成功的驱动力。我们很荣幸有您引领这一旅程。
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=bytedance/deer-flow&type=Date)](https://star-history.com/#bytedance/deer-flow&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Mrguanglei/Botewrite&type=Date)](https://star-history.com/#Mrguanglei/Botewrite&Date)

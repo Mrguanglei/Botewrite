@@ -44,11 +44,11 @@ export function AddMCPServerDialog({
     try {
       const parsed = JSON.parse(value);
       if (!("mcpServers" in parsed)) {
-        setValidationError("Missing `mcpServers` in JSON");
+        setValidationError("JSON中缺少 `mcpServers`");
         return;
       }
     } catch {
-      setValidationError("Invalid JSON");
+      setValidationError("无效的JSON");
       return;
     }
     const result = MCPConfigSchema.safeParse(JSON.parse(value));
@@ -63,14 +63,14 @@ export function AddMCPServerDialog({
         }
       }
       const errorMessage =
-        result.error.errors[0]?.message ?? "Validation failed";
+        result.error.errors[0]?.message ?? "验证失败";
       setValidationError(errorMessage);
       return;
     }
 
     const keys = Object.keys(result.data.mcpServers);
     if (keys.length === 0) {
-      setValidationError("Missing server name in `mcpServers`");
+      setValidationError("`mcpServers` 中缺少服务器名称");
       return;
     }
   }, []);
@@ -115,7 +115,7 @@ export function AddMCPServerDialog({
       setOpen(false);
     } catch (e) {
       console.error(e);
-      setError(`Failed to add server: ${processingServer}`);
+      setError(`添加服务器失败: ${processingServer}`);
     } finally {
       setProcessing(false);
     }
@@ -124,23 +124,23 @@ export function AddMCPServerDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="sm">Add Servers</Button>
+        <Button size="sm">添加服务器</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[560px]">
         <DialogHeader>
-          <DialogTitle>Add New MCP Servers</DialogTitle>
+          <DialogTitle>添加新的MCP服务器</DialogTitle>
         </DialogHeader>
         <DialogDescription>
-          DeerFlow uses the standard JSON MCP config to create a new server.
+          Botewrite 使用标准的 JSON MCP 配置来创建一个新的服务器。
           <br />
-          Paste your config below and click &quot;Add&quot; to add new servers.
+          粘贴你的配置，然后点击 &quot;添加&quot; 来添加新的服务器。
         </DialogDescription>
 
         <main>
           <Textarea
             className="h-[360px] sm:max-w-[510px] break-all"
             placeholder={
-              'Example:\n\n{\n  "mcpServers": {\n    "My Server": {\n      "command": "python",\n      "args": [\n        "-m", "mcp_server"\n      ],\n      "env": {\n        "API_KEY": "YOUR_API_KEY"\n      }\n    }\n  }\n}'
+              '示例:\n\n{\n  "mcpServers": {\n    "我的服务器": {\n      "command": "python",\n      "args": [\n        "-m", "mcp_server"\n      ],\n      "env": {\n        "API_KEY": "YOUR_API_KEY"\n      }\n    }\n  }\n}'
             }
             value={input}
             onChange={(e) => handleChange(e.target.value)}
@@ -154,7 +154,7 @@ export function AddMCPServerDialog({
             </div>
             <div className="flex items-center gap-2">
               <Button variant="outline" onClick={() => setOpen(false)}>
-                Cancel
+                取消
               </Button>
               <Button
                 className="w-24"
@@ -163,7 +163,7 @@ export function AddMCPServerDialog({
                 onClick={handleAdd}
               >
                 {processing && <Loader2 className="animate-spin" />}
-                Add
+                添加
               </Button>
             </div>
           </div>
