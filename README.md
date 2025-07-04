@@ -12,10 +12,10 @@
 
 **BoteWrite** (**D**eep **E**xploration and **E**fficient **R**esearch **Flow**) is a community-driven Deep Research framework that builds upon the incredible work of the open source community. Our goal is to combine language models with specialized tools for tasks like web search, crawling, and Python code execution, while giving back to the community that made this possible.
 
-Currently, BoteWrite has officially entered the [FaaS Application Center of Volcengine](https://console.volcengine.com/vefaas/region:vefaas+cn-beijing/market). Users can experience it online through the [experience link](https://console.volcengine.com/vefaas/region:vefaas+cn-beijing/market/deerflow/?channel=github&source=deerflow) to intuitively feel its powerful functions and convenient operations. At the same time, to meet the deployment needs of different users, BoteWrite supports one-click deployment based on Volcengine. Click the [deployment link](https://console.volcengine.com/vefaas/region:vefaas+cn-beijing/application/create?templateId=683adf9e372daa0008aaed5c&channel=github&source=deerflow) to quickly complete the deployment process and start an efficient research journey.
+Currently, BoteWrite has officially entered the [FaaS Application Center of Volcengine](http://1.92.123.40:3000/). Users can experience it online through the [experience link](http://1.92.123.40:3000/) to intuitively feel its powerful functions and convenient operations. At the same time, to meet the deployment needs of different users, BoteWrite supports one-click deployment based on Volcengine. Click the [deployment link](http://1.92.123.40:3000/) to quickly complete the deployment process and start an efficient research journey.
 
 
-Please visit [our official website](https://deerflow.tech/) for more details.
+Please visit [our official website](http://1.92.123.40:3000/) for more details.
 
 ## Demo
 
@@ -25,13 +25,6 @@ In this demo, we showcase how to use BoteWrite to:
 - Conduct the Deep Research process and produce a comprehensive report with images
 - Create podcast audio based on the generated report
 
-### Replays
-
-- [How tall is Eiffel Tower compared to tallest building?](https://deerflow.tech/chat?replay=eiffel-tower-vs-tallest-building)
-- [What are the top trending repositories on GitHub?](https://deerflow.tech/chat?replay=github-top-trending-repo)
-- [Write an article about Nanjing's traditional dishes](https://deerflow.tech/chat?replay=nanjing-traditional-dishes)
-- [How to decorate a rental apartment?](https://deerflow.tech/chat?replay=rental-apartment-decoration)
-- [Visit our official website to explore more replays.](https://deerflow.tech/#case-studies)
 
 ---
 
