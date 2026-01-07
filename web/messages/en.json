@@ -126,6 +126,11 @@
         "title": "Investigation Mode: {status}",
         "description": "When enabled, DeerFlow will perform a quick search before planning. This is useful for researches related to ongoing events and news."
       },
+      "pptMode": "PPT Mode",
+      "pptModeTooltip": {
+        "title": "PPT Mode: {status}",
+        "description": "When enabled, DeerFlow will generate reports in PPT format."
+      },
       "enhancePrompt": "Enhance prompt with AI",
       "on": "On",
       "off": "Off"

@@ -3,7 +3,7 @@
 
 import { MagicWandIcon } from "@radix-ui/react-icons";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUp, Lightbulb, X } from "lucide-react";
+import { ArrowUp, Lightbulb, Presentation, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useCallback, useRef, useState } from "react";
 
@@ -21,6 +21,7 @@ import type { Option, Resource } from "~/core/messages";
 import {
   setEnableDeepThinking,
   setEnableBackgroundInvestigation,
+  setEnablePPTMode,
   useSettingsStore,
 } from "~/core/store";
 import { cn } from "~/lib/utils";
@@ -54,6 +55,9 @@ export function InputBox({
   );
   const backgroundInvestigation = useSettingsStore(
     (state) => state.general.enableBackgroundInvestigation,
+  );
+  const enablePPTMode = useSettingsStore(
+    (state) => state.general.enablePPTMode,
   );
   const { config, loading } = useConfig();
   const reportStyle = useSettingsStore((state) => state.general.reportStyle);
@@ -271,6 +275,30 @@ export function InputBox({
               }
             >
               <Detective /> {t("investigation")}
+            </Button>
+          </Tooltip>
+          <Tooltip
+            className="max-w-60"
+            title={
+              <div>
+                <h3 className="mb-2 font-bold">
+                  {t("pptModeTooltip.title", {
+                    status: enablePPTMode ? t("on") : t("off"),
+                  })}
+                </h3>
+                <p>{t("pptModeTooltip.description")}</p>
+              </div>
+            }
+          >
+            <Button
+              className={cn(
+                "rounded-2xl",
+                enablePPTMode && "!border-brand !text-brand",
+              )}
+              variant="outline"
+              onClick={() => setEnablePPTMode(!enablePPTMode)}
+            >
+              <Presentation /> {t("pptMode")}
             </Button>
           </Tooltip>
           <ReportStyleDialog />

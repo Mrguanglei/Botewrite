@@ -15,6 +15,7 @@ const DEFAULT_SETTINGS: SettingsState = {
     enableDeepThinking: false,
     enableBackgroundInvestigation: false,
     enableWebSearch: true,
+    enablePPTMode: false,
     maxPlanIterations: 1,
     maxStepNum: 3,
     maxSearchResults: 3,
@@ -33,6 +34,7 @@ export type SettingsState = {
     enableDeepThinking: boolean;
     enableBackgroundInvestigation: boolean;
     enableWebSearch: boolean;
+    enablePPTMode: boolean;
     maxPlanIterations: number;
     maxStepNum: number;
     maxSearchResults: number;
@@ -182,6 +184,16 @@ export function setEnableWebSearch(value: boolean) {
     general: {
       ...state.general,
       enableWebSearch: value,
+    },
+  }));
+  saveSettings();
+}
+
+export function setEnablePPTMode(value: boolean) {
+  useSettingsStore.setState((state) => ({
+    general: {
+      ...state.general,
+      enablePPTMode: value,
     },
   }));
   saveSettings();

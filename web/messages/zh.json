@@ -126,6 +126,11 @@
         "title": "调研模式：{status}",
         "description": "启用后，DeerFlow 将在规划前进行快速搜索。这对于与时事和新闻相关的研究很有用。"
       },
+      "pptMode": "PPT模式",
+      "pptModeTooltip": {
+        "title": "PPT模式：{status}",
+        "description": "启用后，DeerFlow 将生成PPT格式的报告。"
+      },
       "enhancePrompt": "用 AI 增强提示",
       "on": "开启",
       "off": "关闭"
