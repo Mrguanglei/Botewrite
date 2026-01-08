@@ -1,5 +1,3 @@
-# Copyright (c) 2025 Bytedance Ltd. and/or its affiliates
-# SPDX-License-Identifier: MIT
 
 from pathlib import Path
 from typing import Any, Dict
@@ -70,6 +68,9 @@ def _create_llm_use_conf(
 
     if llm_type == "reasoning":
         merged_conf["api_base"] = merged_conf.pop("base_url", None)
+    if "response_format" in merged_conf:
+        # 确保 response_format 被正确传递
+        pass
 
     return (
         ChatOpenAI(**merged_conf)
